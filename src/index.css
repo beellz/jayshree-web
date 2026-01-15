@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Jayshri Group - Premium Corporate Design System
+   Colors: Deep Navy (#1a2744) + Vibrant Orange (#e07a38)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    /* Navy Blue - Primary */
+    --primary: 220 42% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Navy for secondary elements */
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 220 42% 18%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Orange - Accent */
+    --accent: 24 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 24 75% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors for extended palette */
+    --navy: 220 42% 18%;
+    --navy-light: 220 35% 25%;
+    --navy-dark: 220 45% 12%;
+    --orange: 24 75% 55%;
+    --orange-light: 24 80% 65%;
+    --orange-dark: 24 70% 45%;
+    --gold: 43 74% 49%;
+
+    --sidebar-background: 220 42% 18%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 24 75% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 35% 25%;
+    --sidebar-ring: 24 75% 55%;
+  }
+
+  .dark {
+    --background: 220 42% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 40% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 40% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 24 75% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 35% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 24 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 24 75% 55%;
+
+    --sidebar-background: 220 42% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 24 75% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 24 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--orange)) 0%, hsl(var(--orange-light)) 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--navy-dark)) 0%, hsl(var(--navy)) 50%, hsl(var(--navy-light)) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--orange)) 0%, hsl(var(--gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 10px 40px -10px hsla(var(--navy), 0.3);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px hsla(var(--orange), 0.3);
+  }
+}
